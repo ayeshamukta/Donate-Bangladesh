@@ -25,6 +25,7 @@ document.getElementById('noa-button').addEventListener('click',function(event)
         document.getElementById('avl-bal').innerText = totBal1;
 
         modalBox.showModal();
+        includeHistory('void');
     }
    
 })
@@ -84,7 +85,24 @@ document.getElementById('quota-btn').addEventListener('click',function(event)
         modalBox.showModal();
 
         
+        
 
     }
    
 })
+
+
+function includeHistory(str)
+{
+    const time = new Date();
+    const con = document.getElementById('transactions');
+    const newCard = document.createElement('div');
+    newCard.innerHTML = `
+                        <div>
+                            <p>${str}</p>
+                            <p>Date: ${time} (Bangladesh Standard Time)</p>
+
+                        </div>`;
+    con.appendChild(newCard);
+
+}
