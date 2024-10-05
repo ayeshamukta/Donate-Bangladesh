@@ -1,9 +1,9 @@
-function buttonsColor(id)
-{
-    document.getElementById(id).classList.remove('bg-[#B4F461]')
-    document.getElementById(id).classList.add('bg-[#B4F461]')
+// function buttonsColor(id)
+// {
+//     document.getElementById(id).classList.remove('bg-[#B4F461]')
+//     document.getElementById(id).classList.add('bg-[#B4F461]')
 
-}
+// }
 
 function getInput(id)
 {
