@@ -18,14 +18,15 @@ document.getElementById('noa-button').addEventListener('click',function(event)
     }
     else
     {
-       ;
+        
         const newBalNoa = availableBalance + noaAmount;
         document.getElementById('noakhali-current-amount').innerText = newBalNoa;
         const totBal1 = totalBal - noaAmount;
         document.getElementById('avl-bal').innerText = totBal1;
 
         modalBox.showModal();
-        includeHistory('void');
+        includeHistory(noaAmount,'famine-2024 at Feni');
+        
     }
    
 })
@@ -53,7 +54,7 @@ document.getElementById('feni-btn').addEventListener('click',function(event)
         document.getElementById('avl-bal').innerText = totBal;
         modalBox.showModal();
 
-        
+        includeHistory(feniAmount,'Flood Relief in Feni');
 
     }
    
@@ -83,26 +84,8 @@ document.getElementById('quota-btn').addEventListener('click',function(event)
         const totBal = totalBal - quotaAmount;
         document.getElementById('avl-bal').innerText = totBal;
         modalBox.showModal();
-
         
-        
-
+        includeHistory(quotaAmount,'Aid for Injured in the Quota Movement');
     }
    
 })
-
-
-function includeHistory(str)
-{
-    const time = new Date();
-    const con = document.getElementById('transactions');
-    const newCard = document.createElement('div');
-    newCard.innerHTML = `
-                        <div>
-                            <p>${str}</p>
-                            <p>Date: ${time} (Bangladesh Standard Time)</p>
-
-                        </div>`;
-    con.appendChild(newCard);
-
-}
