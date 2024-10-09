@@ -18,3 +18,4 @@ document.getElementById('donate-btn').addEventListener('click',function()
     document.getElementById('transaction').classList.add('hidden')
 });
 
+

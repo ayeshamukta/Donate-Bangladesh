@@ -65,6 +65,7 @@ document.getElementById('quota-btn').addEventListener('click',function(event)
 {
     event.preventDefault();
     const quotaAmount = parseFloat(getInput('quota-amount'));
+
     const quotaAvailBalance = parseFloat(getTextInput('quota-cur-bal'));
     const totalBal = parseFloat(getTextInput('avl-bal'));
     
@@ -89,3 +90,8 @@ document.getElementById('quota-btn').addEventListener('click',function(event)
     }
    
 })
+document.getElementById('blg-btn').addEventListener('click',function()
+{
+    window.location.href = './blog.html';
+    
+});
