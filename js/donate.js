@@ -3,6 +3,9 @@ const modalBox = document.getElementById('my_modal_1');
 
 
 
+
+
+
 document.getElementById('noa-button').addEventListener('click',function(event)
 {
     event.preventDefault();
@@ -10,9 +13,9 @@ document.getElementById('noa-button').addEventListener('click',function(event)
     const availableBalance = parseFloat(getTextInput('noakhali-current-amount'));
     const totalBal = parseFloat(getTextInput('avl-bal'))
     
-    if(totalBal < noaAmount)
+    if((totalBal < noaAmount) || (noaAmount<=0))
     {
-        alert('Invalid Input');
+        alert('Insufficient Amount');
         return;
         
     }
@@ -39,9 +42,9 @@ document.getElementById('feni-btn').addEventListener('click',function(event)
     
     const totalBal = parseFloat(getTextInput('avl-bal'));
     
-    if(( feniAmount> totalBal) || (feniAmount<=0) || (typeof feniAmount !== 'number' ))
+    if(( feniAmount> totalBal) )
     {
-        alert('Invalid Input');
+        alert('Insufficient Amount');
         return;
     }
     else
@@ -73,7 +76,7 @@ document.getElementById('quota-btn').addEventListener('click',function(event)
     
     if((quotaAmount> totalBal) || (quotaAmount<=0) || (typeof quotaAmount !== 'number' ))
     {
-        alert('Invalid Input');
+        alert('Insufficient Amount');
         return;
     }
     else
