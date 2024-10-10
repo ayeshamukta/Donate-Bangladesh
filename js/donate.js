@@ -28,7 +28,7 @@ document.getElementById('noa-button').addEventListener('click',function(event)
         document.getElementById('avl-bal').innerText = totBal1;
 
         modalBox.showModal();
-        includeHistory(noaAmount,'famine-2024 at Feni');
+        includeHistory(noaAmount,'famine-2024 at Noakhali');
         
     }
    
@@ -42,7 +42,7 @@ document.getElementById('feni-btn').addEventListener('click',function(event)
     
     const totalBal = parseFloat(getTextInput('avl-bal'));
     
-    if(( feniAmount> totalBal) )
+    if(( feniAmount> totalBal) || (feniAmount<=0))
     {
         alert('Insufficient Amount');
         return;
@@ -74,7 +74,7 @@ document.getElementById('quota-btn').addEventListener('click',function(event)
     
     
     
-    if((quotaAmount> totalBal) || (quotaAmount<=0) || (typeof quotaAmount !== 'number' ))
+    if((quotaAmount> totalBal) || (quotaAmount<=0) )
     {
         alert('Insufficient Amount');
         return;
