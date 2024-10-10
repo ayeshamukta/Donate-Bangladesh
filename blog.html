@@ -6,6 +6,7 @@
   <title>Blog</title>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/fc88f24eb1.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header class="mb-10 bg-[#fcfaf3] sticky  top-0 z-10">
@@ -27,28 +28,50 @@
             </div>
           </div>
     </nav>
+    <!-- <div class="flex justify-center gap-3 mb-6 sticky top-32 z-10 bg-white pt-8">
+      <button id="donate-btn" class="btn bg-[#B4F461] border border-solid">Donation</button>
+      <button id="history-btn" class="btn border border-solid ">History</button>
+  </div> -->
 </header>
 
-<main class="max-w-screen-xl mx-auto">
-  <div class="collapse collapse-arrow bg-base-200">
-    <input type="radio" name="my-accordion-2" checked="checked" />
-    <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-    <div class="collapse-content">
-      <p>hello</p>
+<main class="max-w-screen-xl mx-auto ">
+  <h1 class="font-bold text-4xl mb-8">Important FAQ <i class="fa-regular fa-circle-question"></i></h1>
+  
+  <div class="space-y-4">
+    <div class="collapse collapse-arrow bg-base-200">
+      <input type="radio" name="my-accordion-2" checked="checked" />
+      <div class="collapse-title text-xl font-medium">What is the Document Object Model(DOM)?</div>
+      <div class="collapse-content">
+        <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of an HTML or XML document as a tree of objects, allowing developers to interact with and manipulate the document's structure, content, and style using programming languages like JavaScript.</p>
+      </div>
     </div>
-  </div>
-  <div class="collapse collapse-arrow bg-base-200">
-    <input type="radio" name="my-accordion-2" />
-    <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-    <div class="collapse-content">
-      <p>hello</p>
+    <div class="collapse collapse-arrow bg-base-200">
+      <input type="radio" name="my-accordion-2" />
+      <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+      <div class="collapse-content">
+        <p>There are several methods for selecting an element from the DOM.</p>
+        <ul>
+          <li>1. document.getElementById('id_name')</li>
+          <li>2. document.getElementByClassName('class_name')</li>
+          <li>3. document.getElementByTagName('tag_name')</li>
+          <li>4. document.querySelector('query')</li>
+          <li>5. document.querySelectorAll('query')</li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <div class="collapse collapse-arrow bg-base-200">
-    <input type="radio" name="my-accordion-2" />
-    <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-    <div class="collapse-content">
-      <p>hello</p>
+    <div class="collapse collapse-arrow bg-base-200">
+      <input type="radio" name="my-accordion-2" />
+      <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+      <div class="collapse-content">
+        <p>Event delegation is a way to manage events more efficiently. Instead of adding an event listener to each individual element, just place a single listener on a parent element. This listener can handle events from all child elements, even if they're added later.</p>
+      </div>
+    </div>
+    <div class="collapse collapse-arrow bg-base-200">
+      <input type="radio" name="my-accordion-2" />
+      <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+      <div class="collapse-content">
+        <p>To manipulate an element's attributes and styles using the DOM we can use getAttribute(), setAttribute(), and removeAttribute() to change the attributes and also can add or remove classes by using classList.add('class_name') & classList.remove('class_name'). </p>
+      </div>
     </div>
   </div>
 </main>
